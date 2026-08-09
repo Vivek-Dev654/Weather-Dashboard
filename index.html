@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+
+  <!-- Linking our CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Page Wrapper (centers the card on screen) ===== -->
+  <div class="page-wrapper">
+
+    <!-- ===== Single Weather Card ===== -->
+    <div class="weather-card">
+
+      <!-- ===== Search Box ===== -->
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">🔍</button>
+      </div>
+
+      <!-- ===== Error Message (hidden by default) ===== -->
+      <p id="errorMsg" class="error-message"></p>
+
+      <!-- ===== Weather Content ===== -->
+      <div class="weather-content" id="weatherContent">
+
+        <!-- Weather Icon -->
+        <img id="weatherIcon" class="weather-icon" src="" alt="weather icon">
+
+        <!-- Big Temperature -->
+        <h1 id="temperature">--°c</h1>
+
+        <!-- Weather Condition (e.g. light rain, clear sky) -->
+        <p id="weatherDescription" class="condition-text">--</p>
+
+        <!-- City and Country -->
+        <h2 id="cityName">--</h2>
+
+        <!-- Feels Like -->
+        <p id="feelsLike" class="feels-like-text">Feels like --°c</p>
+
+        <!-- ===== Bottom Info Row (Humidity + Wind) ===== -->
+        <div class="bottom-info">
+          <div class="info-item">
+            <span class="info-icon">💧</span>
+            <div>
+              <span id="infoHumidity" class="info-value">--%</span>
+              <span class="info-label">humidity</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">💨</span>
+            <div>
+              <span id="infoWind" class="info-value">-- km/h</span>
+              <span class="info-label">wind speed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Linking our JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

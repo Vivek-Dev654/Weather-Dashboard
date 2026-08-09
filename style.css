@@ -1,0 +1,160 @@
+/* ===== Basic Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a1a1a; /* dark background around the card */
+}
+
+/* ===== Page Wrapper: centers the card on the screen ===== */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===== Main Weather Card ===== */
+.weather-card {
+  width: 100%;
+  max-width: 380px;
+  background: linear-gradient(160deg, #0fdca0 0%, #2bb6b0 40%, #6a6fd6 100%);
+  border-radius: 30px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+}
+
+/* ===== Search Box (pill shaped) ===== */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  padding: 6px 6px 6px 22px;
+  margin-bottom: 20px;
+}
+
+#cityInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #333;
+}
+
+#searchBtn {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Simple hover effect on the search button */
+#searchBtn:hover {
+  background-color: #e6e6e6;
+}
+
+/* ===== Error Message ===== */
+.error-message {
+  color: #ffe1e1;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ===== Weather Icon ===== */
+.weather-icon {
+  width: 130px;
+  height: 130px;
+  margin: 10px 0;
+}
+
+/* ===== Big Temperature ===== */
+#temperature {
+  font-size: 56px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+/* ===== Condition Text (e.g. "light rain") ===== */
+.condition-text {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-top: 8px;
+  opacity: 0.95;
+}
+
+/* ===== City Name ===== */
+#cityName {
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+/* ===== Feels Like Text ===== */
+.feels-like-text {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-top: 4px;
+  margin-bottom: 25px;
+}
+
+/* ===== Bottom Info Row (Humidity + Wind) ===== */
+.bottom-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(255, 2, 2, 0);
+  padding-top: 18px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-icon {
+  font-size: 22px;
+}
+
+.info-value {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.info-label {
+  display: block;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Small mobile screens */
+@media (max-width: 400px) {
+  .weather-card {
+    padding: 18px;
+  }
+
+  #temperature {
+    font-size: 46px;
+  }
+
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
